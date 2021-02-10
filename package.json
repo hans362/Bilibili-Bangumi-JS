@@ -1,0 +1,25 @@
+{
+  "name": "bilibili-bangumi-api",
+  "version": "1.0.0",
+  "description": "Render your Bilibili bangumi list on a web page",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run format:check && cross-env NODE_ENV=test jest --coverage --runInBand --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hans362/Bilibili-Bangumi-API.git"
+  },
+  "keywords": [
+    "bangumi"
+  ],
+  "author": "Hans Yu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hans362/Bilibili-Bangumi-API/issues"
+  },
+  "homepage": "https://github.com/hans362/Bilibili-Bangumi-API#readme",
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  }
+}
