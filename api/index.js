@@ -56,7 +56,7 @@ function getsuccess(data, res) {
     res.send(data);
 }
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     const type = req.query.type || "1";
     const pn = req.query.pn || "1";
     const ps = req.query.ps || "10";
