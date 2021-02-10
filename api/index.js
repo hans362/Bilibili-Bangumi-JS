@@ -3,7 +3,7 @@ const url = require('url');
 const express = require('express');
 const app = express();
 
-const myhost = "api.bilibili.com";
+const apiHost = "api.bilibili.com";
 
 class Url {
     getParam(data) {
@@ -19,8 +19,8 @@ class Url {
     }
 }
 
-function nodePostGetRequest(HOST, PORT, method, bodydata, callBackFunction, path, cookie, ressss) {
-    var body = bodydata;
+function nodePostGetRequest(HOST, PORT, method, bodyData, callBackFunction, path, cookie, result) {
+    var body = bodyData;
     var bodyString = JSON.stringify(body);
     var headers = {
         'Content-Type': 'application/json',
@@ -42,33 +42,31 @@ function nodePostGetRequest(HOST, PORT, method, bodydata, callBackFunction, path
         });
         res.on('end', function () {
             let resultObject = JSON.parse(responseString);
-            getsuccess(resultObject, ressss);
+            getSuccess(resultObject, result);
         });
         req.on('error', function (e) {
-            console.log('-----error-------', e);
+            console.log('[Error] ', e);
         });
     });
     req.write(bodyString);
     req.end();
 }
 
-function getsuccess(data, res) {
+function getSuccess(data, res) {
     res.send(data);
 }
 
 app.get('/api', (req, res) => {
     const type = req.query.type || "1";
     const pn = req.query.pn || "1";
-    const ps = req.query.ps || "10";
-    const vmid = req.query.vmid || "66745436";
-    const num = 28;
-    const mycookie = req.query.cookies || "cookies";
+    const ps = req.query.ps || "30";
+    const vmid = req.query.vmid;
+    const userCookie = req.query.cookies || "Disable cookies.";
     let URL = new Url();
-    let mypath = URL.getUrl("/x/space/bangumi/follow/list", { type: type, pn: pn, ps: ps, vmid: vmid });
-    console.log(mypath);
-    nodePostGetRequest(myhost, 80, 'GET', null, getsuccess, mypath, mycookie, res);
+    let apiPath = URL.getUrl("/x/space/bangumi/follow/list", { type: type, pn: pn, ps: ps, vmid: vmid });
+    nodePostGetRequest(apiHost, 80, 'GET', null, getSuccess, apiPath, userCookie, res);
 });
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
+app.listen(port, () => console.log(`[INFO] Server running on ${port}, http://localhost:${port}`));
