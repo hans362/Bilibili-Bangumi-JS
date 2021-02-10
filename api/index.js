@@ -56,7 +56,7 @@ function getsuccess(data, res) {
     res.send(data);
 }
 
-app.get('/list', (req, res) => {
+app.get('/', (req, res) => {
     const type = req.query.type || "1";
     const pn = req.query.pn || "1";
     const ps = req.query.ps || "10";
@@ -69,4 +69,6 @@ app.get('/list', (req, res) => {
     nodePostGetRequest(myhost, 80, 'GET', null, getsuccess, mypath, mycookie, res);
 });
 
-module.exports = app;
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
