@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hans362/Bilibili-Bangumi-API#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "module-alias": "^2.2.2"
   }
 }
