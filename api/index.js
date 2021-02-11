@@ -53,15 +53,16 @@ function nodePostGetRequest(HOST, PORT, method, bodyData, callBackFunction, path
 }
 
 function getSuccess(data, res) {
+    res.set('Access-Control-Allow-Origin', '*');
     res.send(data);
 }
 
 app.get('/api', (req, res) => {
     const type = req.query.type || "1";
     const pn = req.query.pn || "1";
-    const ps = req.query.ps || "30";
+    const ps = req.query.ps || "10";
     const vmid = req.query.vmid;
-    const userCookie = req.query.cookies || "Disable cookies.";
+    const userCookie = process.env.COOKIES || "No cookies.";
     let URL = new Url();
     let apiPath = URL.getUrl("/x/space/bangumi/follow/list", { type: type, pn: pn, ps: ps, vmid: vmid });
     nodePostGetRequest(apiHost, 80, 'GET', null, getSuccess, apiPath, userCookie, res);
