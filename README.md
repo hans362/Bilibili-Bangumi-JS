@@ -71,7 +71,7 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 引入完成后在页面中需要添加追番列表的地方添加一个容器：
 ```html
 <div class='links-content'>
- 	<div class="bgm-collection" id="bgm-collection"></div>
+<div class="bgm-collection" id="bgm-collection"></div>
 </div>
 ```
 
@@ -84,4 +84,5 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 - [jquery/jquery](https://github.com/jquery/jquery) - 本项目中 JS 的前置依赖
 - [BigCoke233/Miracles](https://github.com/BigCoke233/miracles) - 提供了解析 Bilibili API 返回数据的思路
 - [Red-Asuka/bilibili-bangumi-api](https://github.com/Red-Asuka/bilibili-bangumi-api.git) - 提供后端实现
+- [AlanDecode/PandaBangumi-Typecho-Plugin](https://github.com/AlanDecode/PandaBangumi-Typecho-Plugin) - 提供前端 CSS 原型
 - [SukkaW/DisqusJS](https://github.com/SukkaW/DisqusJS) - 提供示例页面的 CSS 样式
