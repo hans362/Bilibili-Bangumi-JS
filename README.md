@@ -48,7 +48,6 @@
 1. Clone 本项目。
 2. 安装 NodeJS 环境（包括 NPM）。
 3. 设置环境变量`COOKIES`为你的 Bilibili Cookies（获取方式：Chrome 中登录 Bilibili 账号，按下 F12 > Application > Cookies，找到`SESSDATA`，对应的值即为 Cookies）。
-![](https://cdn.jsdelivr.net/gh/hans362/Bilibili-Bangumi-JS/assets/2.jpeg)
 4. `npm start`即可将服务运行在`localhost:3000`，自己想个办法让它保持在后台运行着就可以了。
 5. 解析一个域名到服务器，当然你也可以用 IP，需要 SSL 的话可以再搞个反代。
 
@@ -58,7 +57,7 @@
 
 在需要添加追番列表的页面中直接引入 CSS 和 JS。
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bilibili-bangumi-js/dist/bilibili-bangumi.css">
 <script>
@@ -70,7 +69,7 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 上面的代码使用了 JsDelivr 的 CDN 加载了相关资源，你也可以下载本项目`dist`文件夹中的编译好的 CSS 和 JS 进行引入。
 
 引入完成后在页面中需要添加追番列表的地方添加一个容器：
-```
+```html
 <div class='links-content'>
  	<div class="bgm-collection" id="bgm-collection"></div>
 </div>
