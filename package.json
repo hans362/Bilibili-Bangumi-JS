@@ -1,7 +1,7 @@
 {
-  "name": "bilibili-bangumi-api",
+  "name": "bilibili-bangumi-js",
   "version": "1.0.0",
-  "description": "Render your Bilibili bangumi list on a web page",
+  "description": "Render your Bilibili bangumi progress on a static web page",
   "main": "api/index.js",
   "scripts": {
     "start": "node api/index.js"

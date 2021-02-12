@@ -58,13 +58,12 @@ function getSuccess(data, res) {
 }
 
 app.get('/api', (req, res) => {
-    const type = req.query.type || "1";
     const pn = req.query.pn || "1";
     const ps = req.query.ps || "20";
     const vmid = req.query.vmid;
     const userCookie = process.env.COOKIES || "No cookies.";
     let URL = new Url();
-    let apiPath = URL.getUrl("/x/space/bangumi/follow/list", { type: type, pn: pn, ps: ps, vmid: vmid });
+    let apiPath = URL.getUrl("/x/space/bangumi/follow/list", { type: "1", follow_status: "0", pn: pn, ps: ps, vmid: vmid });
     nodePostGetRequest(apiHost, 80, 'GET', null, getSuccess, apiPath, userCookie, res);
 });
 
