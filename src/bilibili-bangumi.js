@@ -1,4 +1,4 @@
-var bangumiJson = (apiUrl || "https://bilibili-bangumi-api.vercel.app/api") + "?vmid=" + userId + "&token=" + new Date().getTime() + Math.random();
+var bangumiJson = (apiUrl || "https://bilibili-bangumi-js.vercel.app/api") + "?vmid=" + userId + "&token=" + new Date().getTime() + Math.random();
 
 $.getJSON(bangumiJson, function (data) {
     $.each(data.data.list, function (index, value) {
