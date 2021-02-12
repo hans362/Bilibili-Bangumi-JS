@@ -27,14 +27,13 @@ $.getJSON(bangumiJson, function (data) {
         var cover = value.cover.replace('http','https');
         $("#bgm-collection").append(`
         <a class="bgm-item" href="${value.url}" target="_blank">
-            <div class="bgm-item-thumb"
-                style="background-image:url(${cover})"></div>
+            <img class="bgm-item-thumb" src="${cover}" referrerpolicy="no-referrer"></img>
             <div class="bgm-item-info">
                 <span class="bgm-item-title main">${value.title}</span>
                 <span class="bgm-item-title">${value.evaluate}</span>
                 <div class="bgm-item-statusBar-container">
                     <div class="bgm-item-statusBar" style="width:${percentage}%"></div>
-                    进度：${ep} / ${total}
+                    <span class="bgm-item-percentage">进度：${ep} / ${total}</span>
                 </div>
             </div>
         </a>

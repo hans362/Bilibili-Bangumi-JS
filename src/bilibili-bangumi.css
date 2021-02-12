@@ -43,7 +43,6 @@
 
 .bgm-item-thumb{
     width: 100%;
-    padding-top: 120%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,19 +78,21 @@
 }
 .bgm-item-statusBar-container{
     margin: 0.2rem auto;
-    background: rgba(0,0,0,0.1);
+    background: #7cd4f2;
     width: 100%;
     position: relative;
     z-index: 0;
-    color: #333;
+    color: white;
+    border-radius: 16px;
 }
 .bgm-item-statusBar{
     position: absolute;
     height: 100%;
-    background: lightpink;
+    background: #00a1d6;
     left: 0;
     top: 0;
     z-index: -1;
+    border-radius: 16px;
 }
 
 .loader{
@@ -111,13 +112,13 @@ body.theme-dark .loader {
 }
 .loader:hover,
 body.theme-dark .loader:hover {
-    border: 3px solid lightpink;
-    color: lightpink;
+    border: 3px solid #00a1d6;
+    color: #00a1d6;
 }
 .dot {
 	width:8px;
 	height:8px;
-	background:lightpink;
+	background:#00a1d6;
 	border-radius:100%;
 	display:inline-block;
 	-webkit-animation:slide 1s infinite;
