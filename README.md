@@ -37,8 +37,8 @@
 1. Fork 本项目。
 2. 前往 Vercel 官网注册或登录。
 3. 在 Vercel Dashboard 中点击 New Project，授权 GitHub，选择账户下 Fork 出来的本项目，点击 Deploy 完成部署。
-4. 点击 Vercel Dashboard 上的本项目，应该出现如下界面：
-![](https://cdn.jsdelivr.net/gh/hans362/Bilibili-Bangumi-JS/assets/1.jpeg)。
+4. 点击 Vercel Dashboard 上的本项目。
+![](https://cdn.jsdelivr.net/gh/hans362/Bilibili-Bangumi-JS/assets/1.jpeg)
 5. 点击 Settings > Environment Variables，添加新的环境变量，选择 Secret 类型，变量名为`COOKIES`，内容为你的 Bilibili Cookies（获取方式：Chrome 中登录 Bilibili 账号，按下 F12 > Application > Cookies，找到`SESSDATA`，对应的值即为 Cookies）。
 ![](https://cdn.jsdelivr.net/gh/hans362/Bilibili-Bangumi-JS/assets/2.jpeg)
 6. 记录下 Vercel 分配的 Production 域名（如 bilibili-bangumi-js.vercel.app）。
@@ -70,9 +70,7 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 
 引入完成后在页面中需要添加追番列表的地方添加一个容器：
 ```html
-<div class='links-content'>
 <div class="bgm-collection" id="bgm-collection"></div>
-</div>
 ```
 
 #### 方案二：静态博客插件

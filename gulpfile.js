@@ -7,15 +7,15 @@ const header = require('gulp-header');
 const pkg = require('./package.json');
 
 
-const jsBanner = ['/*! Bilibili-Bangumi-API v<%= pkg.version %>',
+const jsBanner = ['/*! Bilibili-Bangumi-JS v<%= pkg.version %>',
     'Hans362 (https://hans362.cn)',
-    'https://bilibili-bangumi-api.vercel.app',
+    'https://bilibili-bangumi-js.vercel.app',
     '<%= pkg.license %> License */'
 ].join(' | ');
 
-const cssBanner = ['/*! Bilibili-Bangumi-API v<%= pkg.version %>',
+const cssBanner = ['/*! Bilibili-Bangumi-JS v<%= pkg.version %>',
     'Hans362 (https://hans362.cn)',
-    'https://bilibili-bangumi-api.vercel.app',
+    'https://bilibili-bangumi-js.vercel.app',
     '<%= pkg.license %> License */'
 ].join(' | ');
 
