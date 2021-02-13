@@ -1,6 +1,7 @@
 var bangumiJson = (apiUrl || "https://bilibili-bangumi-js.vercel.app/api") + "?vmid=" + userId + "&token=" + new Date().getTime() + Math.random();
 
 $.getJSON(bangumiJson, function (data) {
+    $("#bgm-collection").empty();
     $.each(data.data.list, function (index, value) {
         var total = 0;
         if (value.is_finish) {
