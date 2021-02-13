@@ -94,6 +94,22 @@
     z-index: -1;
     border-radius: 16px;
 }
+.bgm-navigator{
+    text-align: center;
+}
+.bgm-btn{
+    margin: 0 auto;
+    display: inline-block;
+    text-decoration: none;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 22px;
+    text-align: center;
+    padding: 0 20px;
+    min-width: 80px;
+    color: white;
+    background-color: #2e9fff;
+}
 
 .loader{
     text-align: center;

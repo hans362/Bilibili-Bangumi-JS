@@ -75,7 +75,11 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 
 引入完成后在页面中需要添加追番列表的地方添加一个容器：
 ```html
-<div class="bgm-collection" id="bgm-collection"></div>
+<div class="bgm-container">
+    <div class="bgm-collection" id="bgm-collection">
+        <img style="margin: 0 auto;" src="https://cdn.jsdelivr.net/gh/hans362/Bilibili-Bangumi-JS/assets/bilibili.gif">
+    </div>
+</div>
 ```
 
 #### 方案二：静态博客插件

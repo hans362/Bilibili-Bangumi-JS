@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const header = require('gulp-header');
 const pkg = require('./package.json');
+const connect = require('gulp-connect');
 
 
 const jsBanner = ['/*! Bilibili-Bangumi-JS v<%= pkg.version %>',
@@ -61,5 +62,13 @@ gulp.task('minify-css', () => gulp.src('src/**/*.css')
     .pipe(gulp.dest('dist')));
 
 gulp.task('build', gulp.parallel('minify-js', 'minify-css'));
+
+gulp.task('server', function() {
+    connect.server({
+        livereload: true,
+        port: 8888,
+	host: "0.0.0.0"
+    });
+});
 
 gulp.task('default', gulp.parallel('build'));
