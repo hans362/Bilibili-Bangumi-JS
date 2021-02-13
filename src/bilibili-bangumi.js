@@ -45,7 +45,7 @@ function getPage(pageNum) {
             </a>
             `)
         });
-        if (pageNum < Math.ceil(data.data.total / 20)) {
+        if (pageNum < Math.ceil(data.data.total / 12)) {
             $(".bgm-container").append(`
             <div class="bgm-navigator">
                 <a href="javascript:getPage(${pageNum + 1});" class="bgm-btn">加载更多</a>

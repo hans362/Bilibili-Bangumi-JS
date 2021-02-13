@@ -59,7 +59,7 @@ function getSuccess(data, res) {
 
 app.get('/api', (req, res) => {
     const pn = req.query.pn || "1";
-    const ps = req.query.ps || "20";
+    const ps = req.query.ps || "12";
     const vmid = req.query.vmid;
     const userCookie = "SESSDATA=" + (process.env.COOKIES || "No cookies.");
     let URL = new Url();
