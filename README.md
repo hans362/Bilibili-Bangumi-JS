@@ -2,6 +2,11 @@
 
 > Render your Bilibili bangumi progress on a static web page
 
+[![](https://img.shields.io/npm/v/bilibili-bangumi-js.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-bangumi-js)
+[![](https://img.shields.io/badge/Author-Hans362-blue.svg?style=flat-square)](https://hans362.cn)
+[![](https://img.shields.io/npm/l/bilibili-bangumi-js.svg?style=flat-square)](https://github.com/hans362/Bilibili-Bangumi-JS/blob/master/LICENSE)
+[![](https://data.jsdelivr.com/v1/package/npm/bilibili-bangumi-js/badge)](https://www.jsdelivr.com/package/npm/bilibili-bangumi-js)
+
 一个基于前端 + Serverless Function 的 Bilibili 追番进度展示页面。
 
 ## 起源
