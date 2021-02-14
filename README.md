@@ -64,12 +64,12 @@
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bilibili-bangumi-js/dist/bilibili-bangumi.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bilibili-bangumi-js@latest/dist/bilibili-bangumi.css">
 <script>
 var apiUrl = "https://bilibili-bangumi-js.vercel.app/api"; /* 替换成你的后端域名，后面加上 /api */
 var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中查看 */
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bilibili-bangumi-js/dist/bilibili-bangumi.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bilibili-bangumi-js@latest/dist/bilibili-bangumi.js"></script>
 ```
 上面的代码使用了 JsDelivr 的 CDN 加载了相关资源，你也可以下载本项目`dist`文件夹中的编译好的 CSS 和 JS 进行引入。
 
