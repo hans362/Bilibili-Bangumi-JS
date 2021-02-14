@@ -48,7 +48,15 @@ function getPage(pageNum) {
         if (pageNum < Math.ceil(data.data.total / 12)) {
             $(".bgm-container").append(`
             <div class="bgm-navigator">
-                <a href="javascript:getPage(${pageNum + 1});" class="bgm-btn">加载更多</a>
+                <script>
+                $(".bgm-btn").click(function(){
+                    getPage(${pageNum + 1});
+                    $(this).text("加载中");
+                    $(this).css("background-color","grey");
+                    $(this).unbind("click");
+                })
+                </script>
+                <a class="bgm-btn">加载更多</a>
             </div>
             `)
         }
