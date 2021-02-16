@@ -1,6 +1,6 @@
 {
   "name": "bilibili-bangumi-js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Render your Bilibili bangumi progress on a static web page",
   "main": "api/index.js",
   "scripts": {
