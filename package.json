@@ -4,14 +4,21 @@
   "description": "Render your Bilibili bangumi progress on a static web page",
   "main": "api/index.js",
   "scripts": {
-    "start": "node api/index.js"
+    "start": "node api/index.js",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hans362/Bilibili-Bangumi-API.git"
   },
   "keywords": [
-    "bangumi"
+    "bangumi",
+    "bilibili",
+    "serverless",
+    "static",
+    "vercel",
+    "hexo",
+    "hugo"
   ],
   "author": "Hans Yu",
   "license": "MIT",
@@ -19,7 +26,7 @@
     "url": "https://github.com/hans362/Bilibili-Bangumi-API/issues"
   },
   "homepage": "https://github.com/hans362/Bilibili-Bangumi-API#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "express": "^4.17.1",
