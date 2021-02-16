@@ -84,7 +84,9 @@ var userId = "66745436"; /* 替换成你的 Bilibili UID，可在个人空间中
 
 #### 方案二：静态博客插件
 
-还没写好（逃
+Hexo 用户请参阅 [hexo-tag-bilibili-bangumi](https://github.com/hans362/hexo-tag-bilibili-bangumi)。
+
+Hugo 等其它静态博客用户再等等吧，欢迎好心人开发其它博客的插件。
 
 ## 感谢❤️
 
