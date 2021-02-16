@@ -1,6 +1,6 @@
 # Bilibili-Bangumi-JS
 
-> Render your Bilibili bangumi progress on a static web page
+> 📺 Render your Bilibili bangumi progress on a static web page
 
 [![](https://img.shields.io/npm/v/bilibili-bangumi-js.svg?style=flat-square)](https://www.npmjs.com/package/bilibili-bangumi-js)
 [![](https://img.shields.io/badge/Author-Hans362-blue.svg?style=flat-square)](https://hans362.cn)
