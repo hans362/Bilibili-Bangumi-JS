@@ -52,9 +52,10 @@
 
 1. Clone 本项目。
 2. 安装 NodeJS 环境（包括 NPM）。
-3. 设置环境变量`COOKIES`为你的 Bilibili Cookies（获取方式：Chrome 中登录 Bilibili 账号，按下 F12 > Application > Cookies，找到`SESSDATA`，对应的值即为 Cookies）。
-4. `npm start`即可将服务运行在`localhost:3000`，自己想个办法让它保持在后台运行着就可以了。
-5. 解析一个域名到服务器，当然你也可以用 IP，需要 SSL 的话可以再搞个反代。
+3. 运行`npm install`安装依赖。
+4. 设置环境变量`COOKIES`为你的 Bilibili Cookies（获取方式：Chrome 中登录 Bilibili 账号，按下 F12 > Application > Cookies，找到`SESSDATA`，对应的值即为 Cookies）。
+5. `npm start`即可将服务运行在`localhost:3000`，自己想个办法让它保持在后台运行着就可以了。
+6. 解析一个域名到服务器，当然你也可以用 IP，需要 SSL 的话可以再搞个反代。
 
 ### 前端安装
 
