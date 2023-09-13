@@ -14,10 +14,10 @@ app.get('/api', (req, res) => {
             Cookie: cookies
         }
     }).then((resp) => {
-        res.send(resp.data);
+        res.header("Access-Control-Allow-Origin", "*").send(resp.data);
     }).catch((err) => {
         console.log(err);
-        res.send(err);
+        res.header("Access-Control-Allow-Origin", "*").send(err);
     });
 });
 
