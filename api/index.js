@@ -1,70 +1,24 @@
-const http = require('http');
-const url = require('url');
+const axios = require('axios');
 const express = require('express');
 const app = express();
 
 const apiHost = "api.bilibili.com";
 
-class Url {
-    getParam(data) {
-        let url = '';
-        for (var k in data) {
-            let value = data[k] !== undefined ? data[k] : '';
-            url += `&${k}=${encodeURIComponent(value)}`
-        }
-        return url ? url.substring(1) : ''
-    }
-    getUrl(url, data) {
-        return url += (url.indexOf('?') < 0 ? '?' : '') + this.getParam(data)
-    }
-}
-
-function nodePostGetRequest(HOST, PORT, method, bodyData, callBackFunction, path, cookie, result) {
-    var body = bodyData;
-    var bodyString = JSON.stringify(body);
-    var headers = {
-        'Content-Type': 'application/json',
-        'Content-Length': bodyString.length,
-        'Cookie': cookie
-    };
-    var options = {
-        host: HOST,
-        port: PORT,
-        path: path,
-        method: method,
-        headers: headers
-    };
-    var req = http.request(options, function (res) {
-        res.setEncoding('utf-8');
-        var responseString = '';
-        res.on('data', function (data) {
-            responseString += data;
-        });
-        res.on('end', function () {
-            let resultObject = JSON.parse(responseString);
-            getSuccess(resultObject, result);
-        });
-        req.on('error', function (e) {
-            console.log('[Error] ', e);
-        });
-    });
-    req.write(bodyString);
-    req.end();
-}
-
-function getSuccess(data, res) {
-    res.set('Access-Control-Allow-Origin', '*');
-    res.send(data);
-}
-
 app.get('/api', (req, res) => {
     const pn = req.query.pn || "1";
     const ps = req.query.ps || "12";
     const vmid = req.query.vmid;
-    const userCookie = "SESSDATA=" + (process.env.COOKIES || "No cookies.");
-    let URL = new Url();
-    let apiPath = URL.getUrl("/x/space/bangumi/follow/list", { type: "1", follow_status: "0", pn: pn, ps: ps, vmid: vmid });
-    nodePostGetRequest(apiHost, 80, 'GET', null, getSuccess, apiPath, userCookie, res);
+    const cookies = "SESSDATA=" + (process.env.COOKIES || "No cookies.");
+    axios.get("https://" + apiHost + "/x/space/bangumi/follow/list?type=1&follow_status=0&pn=" + pn + "&ps=" + ps + "&vmid=" + vmid, {
+        headers: {
+            Cookie: cookies
+        }
+    }).then((resp) => {
+        res.send(resp.data);
+    }).catch((err) => {
+        console.log(err);
+        res.send(err);
+    });
 });
 
 const port = process.env.PORT || 3000;
