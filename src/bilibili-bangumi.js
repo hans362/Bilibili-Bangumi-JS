@@ -30,7 +30,7 @@ function getPage(pageNum) {
                 ep = 0;
             }
             var percentage = ep / total * 100;
-            var cover = value.cover.replace('http', 'https');
+            var cover = value.cover.replace('http://', 'https://');
             $(".bgm-collection").append(`
             <a class="bgm-item" href="${value.url}" target="_blank">
                 <img class="bgm-item-thumb" src="${cover}" referrerpolicy="no-referrer"></img>
